@@ -1,7 +1,7 @@
 <page-header></page-header>
 <nz-space nzDirection="horizontal" nzWrap="true">
     <ng-container *ngFor="let device of devices">
-        <nz-card *nzSpaceItem nzTitle="{{device.title}}" style="width: 300px">
+        <nz-card *nzSpaceItem nzTitle="{{device.title}}" [routerLink]="[device.url]" style="width: 300px; cursor: pointer;">
             <p>{{device.description}}</p>
         </nz-card>
     </ng-container>

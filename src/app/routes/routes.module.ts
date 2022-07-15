@@ -12,11 +12,13 @@ import { UserRegisterComponent } from './passport/register/register.component';
 import { RouteRoutingModule } from './routes-routing.module';
 //echarts
 import { NgxEchartsModule } from 'ngx-echarts';
+import { ChartPageComponent } from './chart-page/chart-page.component';
 
 const COMPONENTS: Array<Type<void>> = [
   DashboardComponent,
   // passport pages
   UserLoginComponent,
+  ChartPageComponent,
   UserRegisterComponent,
   UserRegisterResultComponent,
   // single pages

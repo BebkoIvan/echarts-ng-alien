@@ -5,6 +5,8 @@ import { environment } from '@env/environment';
 // layout
 import { LayoutBasicComponent } from '../layout/basic/basic.component';
 import { LayoutPassportComponent } from '../layout/passport/passport.component';
+import { ChartOptionsResolver } from './chart-options.resolver';
+import { ChartPageComponent } from './chart-page/chart-page.component';
 // dashboard pages
 import { DashboardComponent } from './dashboard/dashboard.component';
 // single pages
@@ -22,10 +24,13 @@ const routes: Routes = [
     canActivate: [SimpleGuard],
     children: [
       { path: '', redirectTo: 'devices', pathMatch: 'full' },
-      { path: 'devices', component: DashboardComponent, data: { title: '仪表盘', titleI18n: 'devices' } },
+      { path: 'devices', component: DashboardComponent, data: { title: '仪表盘', titleI18n: 'devices' }},
+      { 
+        path: 'devices/:device',
+        component: ChartPageComponent,
+        resolve: { preFetchData: ChartOptionsResolver }
+      },
       { path: 'exception', loadChildren: () => import('./exception/exception.module').then(m => m.ExceptionModule) },
-      // 业务子模块
-      // { path: 'widgets', loadChildren: () => import('./widgets/widgets.module').then(m => m.WidgetsModule) },
     ]
   },
   // 空白布局
