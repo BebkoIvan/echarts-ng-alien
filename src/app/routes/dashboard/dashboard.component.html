@@ -1,0 +1,8 @@
+<page-header></page-header>
+<nz-space nzDirection="horizontal" nzWrap="true">
+    <ng-container *ngFor="let device of devices">
+        <nz-card *nzSpaceItem nzTitle="{{device.title}}" style="width: 300px">
+            <p>{{device.description}}</p>
+        </nz-card>
+    </ng-container>
+  </nz-space>
