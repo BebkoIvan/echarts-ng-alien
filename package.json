@@ -44,7 +44,7 @@
     "echarts": "^5.3.3",
     "ng-alain": "13.5.2",
     "ng-zorro-antd": "^13.3.2",
-    "ngx-echarts": "^13.0.0",
+    "ngx-echarts": "8.0.1",
     "rxjs": "~7.4.0",
     "screenfull": "^6.0.1",
     "tslib": "^2.3.0",
